@@ -17,11 +17,25 @@
     btn.textContent = isLight ? '🌙' : '☀️';
   });
 
-  // Fake contact form submit
+  // Update form handling
   const form = document.getElementById('contactForm');
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    alert('Message sent successfully!');
-    form.reset();
+    const btn = form.querySelector('button');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    
+    try {
+      // Add your form submission logic here
+      // For now, just simulate a delay
+      await new Promise(r => setTimeout(r, 1000));
+      alert('Message sent successfully!');
+      form.reset();
+    } catch (err) {
+      alert('Failed to send message. Please try again.');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Send message';
+    }
   });
 })();
