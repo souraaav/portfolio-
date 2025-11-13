@@ -105,10 +105,10 @@ Once hosted (e.g., GitHub Pages, Netlify, Vercel), you can add a live preview li
 ## 🧑‍💻 Author
 
 **Sourav Chowdhury**  
-- 💼 [GitHub](https://github.com/souraaav)  
-- 🐦 Twitter: @yourhandle  
-- 📸 Instagram: @yourhandle  
-- ✉️ Email: you@example.com
+- 💼 github: (https://github.com/souraaav)  
+- 🐦 Twitter: @cl4n_tex_9 
+- 📸 Instagram: @cl4n.fx
+- ✉️ Email: souravchowdhury804@gmail.com
 
 ---
 
