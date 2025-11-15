@@ -76,7 +76,8 @@ Then open your browser and visit `http://127.0.0.1:5000/`
 
 ## 📸 Demo
 screenshot
-<img width="628" height="3620" alt="urboisourav netlify app_" src="https://github.com/user-attachments/assets/78643f42-203e-40c7-bed5-aa2ddf2e2507" />
+<img width="1636" height="1008" alt="{368AA4DD-BF78-4107-9C6A-DA2E8F9A8AF8}" src="https://github.com/user-attachments/assets/05b5e8c7-d216-4be1-a738-5ee5b5fc6ad4" />
+
 
 
 ---
