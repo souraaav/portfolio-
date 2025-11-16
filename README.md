@@ -1,7 +1,7 @@
 
 ---
 
-# 🖥️ Personal Portfolio – Python-Powered Web Showcase  
+#  Personal Portfolio – Python-Powered Web Showcase  
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen)  
 ![Made with](https://img.shields.io/badge/made%20with-Python%20%7C%20Flask%20%7C%20HTML%20%7C%20CSS-blue)  
@@ -13,13 +13,13 @@ It serves as a digital resume and interactive showcase of your skills, projects,
 
 ---
 
-## 📝 Summary  
+##  Summary  
 
 This project demonstrates how a simple Flask backend can power a **professional portfolio website**. It highlights your **skills, projects, education, and contact details** in a clean, responsive design. Visitors can easily navigate through sections, making it a perfect way to present yourself online.  
 
 ---
 
-## 🌟 Project Overview  
+##  Project Overview  
 
 The portfolio website is structured to highlight your:  
 - 💻 Technical skills and expertise  
@@ -29,7 +29,7 @@ The portfolio website is structured to highlight your:
 
 ---
 
-## 📂 File Descriptions  
+##  File Descriptions  
 
 <details>
 <summary>🔑 <code>main.py</code> – Core Backend</summary>  
@@ -46,7 +46,7 @@ The portfolio website is structured to highlight your:
 </details>  
 
 <details>
-<summary>📊 <code>data.py</code> – Dynamic Content</summary>  
+<summary> <code>data.py</code> – Dynamic Content</summary>  
 
 - Stores dictionaries/lists for:  
   - 📂 Project details (title, description, links)  
@@ -58,7 +58,7 @@ The portfolio website is structured to highlight your:
 
 ---
 
-## 🛠️ Technologies Used  
+##  Technologies Used  
 
 - 🐍 **Python** — Core programming language  
 - ⚡ **Flask** — Lightweight web framework  
@@ -67,7 +67,7 @@ The portfolio website is structured to highlight your:
 
 ---
 
-## 🚀 Getting Started  
+##  Getting Started  
 
 ### Prerequisites  
 - Python 3.x  
@@ -85,13 +85,13 @@ Then open your browser and visit 👉 `urboisourav.netlify.app`
 
 ---
 
-## 📸 Demo  
+##  Demo  
 
 ![Portfolio Screenshot](https://github.com/user-attachments/assets/05b5e8c7-d216-4be1-a738-5ee5b5fc6ad4)  
 
 ---
 
-## 💡 Future Enhancements  
+##  Future Enhancements  
 
 - 🌙 Add **dark mode toggle**  
 - 📝 Include a **blog section**  
@@ -100,7 +100,7 @@ Then open your browser and visit 👉 `urboisourav.netlify.app`
 
 ---
 
-## 📄 License  
+##  License  
 
 This project is licensed under the [Unlicense](LICENSE), allowing free use and modification.  
 
