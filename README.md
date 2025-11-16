@@ -1,6 +1,3 @@
-Perfect, Sourav! Let’s add a **Live Demo badge** so visitors can instantly try your portfolio without cloning the repo. This makes your README more interactive and professional.  
-
-Here’s the enhanced version with the badge included:
 
 ---
 
@@ -109,6 +106,3 @@ This project is licensed under the [Unlicense](LICENSE), allowing free use and m
 
 ---
 
-👉 Once you deploy your portfolio (e.g., on **Heroku**, **Render**, or **Vercel**), just replace `https://your-deployment-link.com` in the **Live Demo badge** with your actual hosted URL.  
-
-Would you like me to also guide you step‑by‑step on deploying this Flask portfolio to **Render** (free hosting) so you can immediately have a working demo link?
