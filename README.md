@@ -81,7 +81,7 @@ The portfolio website is structured to highlight your:
 python main.py
 ```
 
-Then open your browser and visit 👉 `http://127.0.0.1:5000/`  
+Then open your browser and visit 👉 `urboisourav.netlify.app`  
 
 ---
 
