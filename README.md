@@ -6,7 +6,7 @@
 ![Status](https://img.shields.io/badge/status-active-brightgreen)  
 ![Made with](https://img.shields.io/badge/made%20with-Python%20%7C%20Flask%20%7C%20HTML%20%7C%20CSS-blue)  
 ![License](https://img.shields.io/badge/license-Unlicense-lightgrey)  
-[![Live Demo](https://img.shields.io/badge/demo-online-blue?style=for-the-badge&logo=google-chrome)](https://your-deployment-link.com)  
+[![Live Demo](https://img.shields.io/badge/demo-online-blue?style=for-the-badge&logo=google-chrome)](https://urboisourav.netlify.app/)  
 
 A **dynamic personal portfolio website** built with **Python & Flask**.  
 It serves as a digital resume and interactive showcase of your skills, projects, and contact information.  
