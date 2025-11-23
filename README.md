@@ -103,7 +103,9 @@ Deploy status badge
 - 📝 Include a **blog section**  
 - 🎨 Enhance with **animations & transitions**  
 - ☁️ Deploy on **Heroku / Render / Vercel**  
-
+```bash
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6fb196af-74cb-4d3e-9d08-22eee2df7c3f/deploy-status)](https://app.netlify.com/projects/tybsourav/deploys)
+```
 ---
 
 ##  License  
