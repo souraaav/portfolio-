@@ -90,7 +90,13 @@ Then open your browser and visit 👉 `tybsourav.netlify.app`
 ![Portfolio Screenshot](https://github.com/user-attachments/assets/05b5e8c7-d216-4be1-a738-5ee5b5fc6ad4)  
 
 ---
+Deploy status badge
+This image automatically updates to reflect the current state of your latest production deploy. To create a status badge for a deployed branch, add the ?branch= query parameter to the badge URL. You can use the markdown snippet below to add it to your project README.
 
+Deploy status badge
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6fb196af-74cb-4d3e-9d08-22eee2df7c3f/deploy-status)]
+
+---
 ##  Future Enhancements  
 
 - 🌙 Add **dark mode toggle**  
