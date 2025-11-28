@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Technology](https://img.shields.io/badge/Technology-HTML%20%7C%20CSS%20%7C%20JS-F8982D.svg)](#[Technologies])
-[![Status](https://img.shields.io/badge/Status-Live-brightgreen.svg)]([])
+[![Status](https://img.shields.io/badge/Status-Live-brightgreen.svg)]([tybsourav.netlify.app])
 [![GitHub Repo stars](https://img.shields.io/github/stars/souraaav/portfolio-?style=social)](https://github.com/souraaav/portfolio-/stargazers)
 
 ---
