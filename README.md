@@ -80,3 +80,38 @@ You only need a modern web browser (like Chrome, Firefox, or Edge).
 ## 📂 Project Structure
 
 The repository is organized logically for clarity and maintenance:
+---
+
+## 🤝 Contribution
+
+Feel free to fork the repository, modify it for your own use, or submit pull requests for any suggested improvements to the design, accessibility, or code quality.
+
+1.  Fork the Project.
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your Changes (`git commit -m 'feat: Add some AmazingFeature'`).
+4.  Push to the Branch (`git push origin feature/AmazingFeature`).
+5.  Open a Pull Request.
+
+---
+
+## 👤 Contact
+
+**[Your Name]** – [Your Email Address] – [Your LinkedIn Profile Link]
+
+Connect with me on social platforms:
+
+* **GitHub:** [https://github.com/souraaav](https://github.com/souraaav)
+* **LinkedIn:** [Your LinkedIn URL]
+* **[Other Social Link (e.g., Twitter/X)]:** [Your Other Social URL]
+
+Project Link: [https://github.com/souraaav/portfolio-](https://github.com/souraaav/portfolio-)
+
+---
+
+## ⚖️ License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+***
+
+_**Disclaimer:** This README is created based on the file structure (HTML, CSS, JS) and general description found in the `souraaav/portfolio-` repository._
