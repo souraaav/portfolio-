@@ -1,6 +1,6 @@
 # [Developer Name]'s Portfolio
 
-## ✨ Welcome to My Digital Portfolio
+##  Welcome to My Digital Portfolio
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Technology](https://img.shields.io/badge/Technology-HTML%20%7C%20CSS%20%7C%20JS-F8982D.svg)](#[Technologies])
@@ -9,7 +9,7 @@
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 This repository hosts the source code for my professional portfolio website, meticulously designed to showcase my skills, experience, and development projects.
 
@@ -24,7 +24,7 @@ The site is built with a focus on **clean design, robust responsiveness, and hig
 
 ---
 
-## 💻 Technologies Used
+##  Technologies Used
 
 This portfolio is a lean and performant application built primarily with foundational web technologies.
 
@@ -41,15 +41,15 @@ This portfolio is a lean and performant application built primarily with foundat
 
 ---
 
-## 🌐 Live Demo
+##  Live Demo
 
 Experience the live version of the portfolio here:
 
-➡️ **[Visit the Portfolio]([LIVE DEMO URL])**
+ **[Visit the Portfolio]([LIVE DEMO URL])**
 
 ---
 
-## 🛠️ Installation and Local Setup
+##  Installation and Local Setup
 
 To get a local copy up and running for development or contribution, follow these simple steps.
 
@@ -77,12 +77,12 @@ You only need a modern web browser (like Chrome, Firefox, or Edge).
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 The repository is organized logically for clarity and maintenance:
 ---
 
-## 🤝 Contribution
+##  Contribution
 
 Feel free to fork the repository, modify it for your own use, or submit pull requests for any suggested improvements to the design, accessibility, or code quality.
 
@@ -94,7 +94,7 @@ Feel free to fork the repository, modify it for your own use, or submit pull req
 
 ---
 
-## 👤 Contact
+##  Contact
 
 **[Your Name]** – [Your Email Address] – [Your LinkedIn Profile Link]
 
@@ -108,7 +108,7 @@ Project Link: [https://github.com/souraaav/portfolio-](https://github.com/souraa
 
 ---
 
-## ⚖️ License
+##  License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
