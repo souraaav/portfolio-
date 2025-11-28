@@ -1,0 +1,558 @@
+/* --- VARIABLES --- */
+:root {
+    /* Dark Theme (Default) */
+    --text: #ffffff;
+    --text-secondary: #a0a0a0;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.15); /* Slightly stronger border */
+    --accent-color: #3b82f6; /* Tailwind Blue 500 */
+    --dark-bg: #0a0e1a;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --logo-color: var(--accent-color);
+}
+
+/* Light Theme */
+body.light {
+    --text: #1a1a1a;
+    --text-secondary: #555555;
+    --card-bg: rgba(0, 0, 0, 0.03);
+    --card-border: rgba(0, 0, 0, 0.15); /* Slightly stronger border */
+    --accent-color: #1d4ed8; /* Tailwind Blue 700 */
+    --dark-bg: #fdfcff;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --logo-color: var(--text);
+}
+
+/* BASIC RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    /* Main color transition for theme change */
+    transition: background 0.7s ease, color 0.7s ease; 
+}
+
+/* --- BACKGROUND GRADIENT ANIMATION --- */
+body {
+    background: linear-gradient(145deg, #0a0e1a, #111828, #0b0f1f);
+    background-size: 300% 300%;
+    animation: darkGradient 18s ease infinite; /* Slower animation for smoothness */
+}
+
+@keyframes darkGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body.light {
+    background: linear-gradient(145deg, #fdfcff, #f3f5ff, #eaf4ff);
+    background-size: 300% 300%;
+    animation: lightGradient 18s ease infinite;
+}
+
+@keyframes lightGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- LAYOUT --- */
+section {
+    max-width: 1100px; /* Slightly wider max width */
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* --- TYPOGRAPHY & ELEMENTS --- */
+.logo {
+    font-size: 1.75rem; /* Slightly larger logo */
+    font-weight: 800;
+    color: var(--logo-color);
+    transition: color 0.4s ease;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 4.5rem);
+    margin-bottom: 20px;
+    letter-spacing: -0.05em;
+    /* Initial state and transition handled by JS */
+}
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    color: var(--text-secondary);
+    max-width: 700px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    /* Initial state and transition handled by JS */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    font-weight: 800;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 14px 36px;
+    background: var(--accent-color);
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 15px rgba(59, 130, 246, 0.3);
+
+    transition: 
+        transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+        background 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+body.light .cta-button {
+    box-shadow: 0 8px 15px rgba(29, 78, 216, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 20px var(--shadow-color);
+}
+.cta-button:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+
+/* --- NAVBAR --- */
+.navbar {
+    position: sticky; /* Use sticky for a better user experience on scroll */
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 15px 0;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--card-border);
+    transition: background 0.7s ease, border-color 0.7s ease;
+}
+body.light .navbar {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--text);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+#themeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text);
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    transition: transform 0.3s ease;
+    padding: 0;
+}
+#themeToggle svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    /* Add transition for smooth icon color/shape change */
+    transition: all 0.5s ease-in-out; 
+}
+
+
+/* --- CARD GRID LAYOUT & SCROLL REVEAL --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card-item {
+    border-radius: 16px; /* Slightly more rounded */
+    border: 1px solid var(--card-border);
+    background: var(--card-bg);
+    overflow: hidden;
+
+    /* Scroll-start hidden */
+    opacity: 0;
+    transform: translateY(40px); /* Starts farther down */
+
+    /* Enhanced transition properties */
+    transition:
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), /* Slower and smoother animation */
+        opacity 0.5s ease,
+        box-shadow 0.35s ease,
+        border 0.35s ease;
+}
+
+/* Scroll-in class (added by JS) */
+.card-item.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover — professional elevation */
+.card-item:hover {
+    transform: translateY(-10px); /* Lifts higher */
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.35),
+        0 8px 15px rgba(0,0,0,0.25);
+    border: 1px solid var(--accent-color); /* Highlight on hover */
+}
+
+/* Light mode version */
+body.light .card-item {
+    background: rgba(255,255,255,0.7);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+body.light .card-item:hover {
+    box-shadow: 
+        0 18px 30px rgba(0,0,0,0.15),
+        0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- PROJECT SPECIFIC STYLES --- */
+.project-card {
+    padding-bottom: 0; 
+    cursor: pointer;
+}
+
+.placeholder {
+    height: 220px; /* Taller placeholder */
+    background: rgba(125, 125, 125, 0.08);
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    border-bottom: 1px solid var(--card-border);
+    /* Morphing placeholder effect */
+    transition: background 0.4s ease, border-color 0.4s ease; 
+}
+
+.project-card:hover .placeholder {
+    border-bottom-color: var(--accent-color);
+    background: rgba(59, 130, 246, 0.1); /* Subtle color shift on hover */
+}
+
+.project-body {
+    padding: 30px; /* More padding */
+}
+
+.project-body h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.project-body p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* --- SKILL SPECIFIC STYLES --- */
+.skill-card {
+    padding: 30px;
+}
+
+.skill-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.skill-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-card li {
+    padding: 10px 0;
+    font-size: 1.05rem;
+    border-bottom: 1px dashed rgba(125, 125, 125, 0.2); /* Dashed separator */
+    color: var(--text);
+    /* Transition for subtle effect */
+    transition: color 0.3s ease;
+}
+
+.skill-card li:last-child {
+    border-bottom: none;
+}
+
+.skill-card li:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+/* --- ABOUT / HOBBY SPECIFIC STYLES --- */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text {
+    max-width: 500px;
+    padding: 30px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    border-radius: 16px;
+}
+.about-text.reveal-on-load {
+    /* Ensure the about text also fades in nicely */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.8s ease;
+}
+.about-text.reveal-on-load.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.hobby-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 30px;
+    width: 320px;
+    flex-shrink: 0;
+}
+
+.football-icon {
+    width: 70px;
+    height: 70px;
+    fill: var(--accent-color);
+    margin-bottom: 20px;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Spring-like animation */
+}
+
+.hobby-card:hover .football-icon {
+    transform: rotate(360deg) scale(1.15);
+}
+
+.hobby-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.hobby-card p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* --- CONTACT SPECIFIC STYLES --- */
+.contact {
+    text-align: center;
+}
+
+.contact-subtext {
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+.contact-form {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid var(--card-border);
+    background: var(--dark-bg);
+    color: var(--text);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical;
+}
+
+body.light .contact-form input,
+body.light .contact-form textarea {
+    background: #ffffff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.submit-button {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    margin-top: 80px;
+    transition: border-color 0.4s ease;
+}
+
+/* --- SOCIAL APP ICONS --- */
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    /* Initial state for JS animation */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px; /* Slightly larger */
+    height: 55px;
+    border-radius: 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    text-decoration: none;
+    /* Enhanced transition on hover */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.social-btn svg {
+    width: 26px; /* Slightly larger icon */
+    height: 26px;
+    fill: currentColor;
+    transition: fill 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    color: #fff;
+    border-color: transparent;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+    .nav-links { display: none; }
+    .hero { min-height: 80vh; }
+}
+
+@media (max-width: 500px) {
+    .hero h1 { font-size: 2.5rem; }
+    .section-title { font-size: 2rem; }
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .about-text {
+        max-width: 100%;
+        padding: 20px;
+    }
+    .hobby-card {
+        width: 100%;
+    }
+}
