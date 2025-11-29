@@ -34,18 +34,12 @@ This portfolio is a lean and performant application built primarily with foundat
 | **Styling** | CSS3 | Custom-written styles for a clean, modern, and adaptive aesthetic. |
 | **Interactivity**| JavaScript (ES6+) | Handles DOM manipulation, theme toggling, and form submission logic. |
 
-### Development Tools & Libraries
-
-* **[Optional: Add a CSS framework like Bootstrap or Tailwind, if used]**
-* **[Optional: Add an animation library like AOS, if used]**
-
----
 
 ##  Live Demo
 
 Experience the live version of the portfolio here:
 
- **[Visit the Portfolio]([LIVE DEMO URL])**
+ **[Visit the Portfolio]([tybsourav.netlify.app])**
 
 ---
 
