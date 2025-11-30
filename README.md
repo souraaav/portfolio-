@@ -90,12 +90,12 @@ Feel free to fork the repository, modify it for your own use, or submit pull req
 
 ##  Contact
 
-**[Your Name]** – [Your Email Address] – [Your LinkedIn Profile Link]
+**[sourav chowdhury]** – [souravchowdhury804@gmail.com] – [https://www.linkedin.com/in/sourav-chowdhury-60b104373/]
 
 Connect with me on social platforms:
 
 * **GitHub:** [https://github.com/souraaav](https://github.com/souraaav)
-* **LinkedIn:** [Your LinkedIn URL]
+* **LinkedIn:** []
 * **[Other Social Link (e.g., Twitter/X)]:** [Your Other Social URL]
 
 Project Link: [https://github.com/souraaav/portfolio-](https://github.com/souraaav/portfolio-)
