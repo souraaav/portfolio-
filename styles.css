@@ -391,7 +391,7 @@ body.light .card-item:hover {
     flex-shrink: 0;
 }
 
-.football-icon {
+.hobby-icon {
     width: 70px;
     height: 70px;
     fill: var(--accent-color);
@@ -399,7 +399,7 @@ body.light .card-item:hover {
     transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Spring-like animation */
 }
 
-.hobby-card:hover .football-icon {
+.hobby-card:hover .hobby-icon {
     transform: rotate(360deg) scale(1.15);
 }
 
