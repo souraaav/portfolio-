@@ -39,7 +39,7 @@ This portfolio is a lean and performant application built primarily with foundat
 
 Experience the live version of the portfolio here:
 
- **[Visit the Portfolio]([tybsourav.netlify.app])**
+ **[Visit the Portfolio]([https://tybsourav.netlify.app/])**
 
 ---
 
