@@ -178,6 +178,36 @@
         </div>
     </footer>
 
+    <!-- Firebase Configuration -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyD-H1Ie2FPrOoeZPI-Gmg0E90_HRR-LN0Y",
+          authDomain: "tybsourav-8ddc8.firebaseapp.com",
+          projectId: "tybsourav-8ddc8",
+          storageBucket: "tybsourav-8ddc8.firebasestorage.app",
+          messagingSenderId: "415130466246",
+          appId: "1:415130466246:web:647f16a739daf4bdaf64c7",
+          measurementId: "G-K906HJSD4X"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        // Initialize Firestore and make it available globally
+        const db = getFirestore(app);
+        window.db = db;
+        window.collection = collection;
+        window.addDoc = addDoc;
+    </script>
+
 <script src="script.js"></script>
 </body>
 </html>
