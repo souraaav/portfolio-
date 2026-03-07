@@ -44,27 +44,83 @@ body {
 
 /* --- BACKGROUND GRADIENT ANIMATION --- */
 body {
-    background: linear-gradient(145deg, #0a0e1a, #111828, #0b0f1f);
-    background-size: 300% 300%;
-    animation: darkGradient 18s ease infinite; /* Slower animation for smoothness */
+    background: linear-gradient(135deg, #0a0e1a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #0a0e1a 100%);
+    background-size: 400% 400%;
+    animation: darkGradient 20s ease infinite;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 255, 198, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 @keyframes darkGradient {
     0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+    25% { background-position: 100% 0%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
     100% { background-position: 0% 50%; }
 }
 
 body.light {
-    background: linear-gradient(145deg, #fdfcff, #f3f5ff, #eaf4ff);
-    background-size: 300% 300%;
-    animation: lightGradient 18s ease infinite;
+    background: linear-gradient(135deg, #fdfcff 0%, #f0f4ff 25%, #e6f3ff 50%, #d1e7ff 75%, #fdfcff 100%);
+    background-size: 400% 400%;
+    animation: lightGradient 20s ease infinite;
+}
+
+body.light::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(34, 197, 94, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 @keyframes lightGradient {
     0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+    25% { background-position: 100% 0%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
     100% { background-position: 0% 50%; }
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* --- LAYOUT --- */
@@ -96,6 +152,7 @@ section {
     font-size: clamp(3rem, 7vw, 4.5rem);
     margin-bottom: 20px;
     letter-spacing: -0.05em;
+    animation: fadeInUp 1s ease-out 0.2s both;
     /* Initial state and transition handled by JS */
 }
 
@@ -105,6 +162,7 @@ section {
     max-width: 700px;
     line-height: 1.6;
     margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out 0.4s both;
     /* Initial state and transition handled by JS */
 }
 
@@ -125,7 +183,7 @@ section {
     font-weight: 600;
     font-size: 1.1rem;
     box-shadow: 0 8px 15px rgba(59, 130, 246, 0.3);
-
+    animation: float 3s ease-in-out infinite;
     transition: 
         transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
         background 0.4s ease,
@@ -153,13 +211,17 @@ body.light .cta-button {
     width: 100%;
     z-index: 10;
     padding: 15px 0;
-    backdrop-filter: blur(12px);
-    background: rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid var(--card-border);
-    transition: background 0.7s ease, border-color 0.7s ease;
+    backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(10, 14, 26, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.7s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
+
 body.light .navbar {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(253, 252, 255, 0.85);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .nav-inner {
@@ -531,6 +593,27 @@ body.light .contact-form textarea {
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     color: #fff;
     border-color: transparent;
+}
+
+/* Social platform specific colors */
+.social-btn.github:hover {
+    background: linear-gradient(135deg, #333, #24292e);
+    box-shadow: 0 15px 30px rgba(51, 51, 51, 0.4);
+}
+
+.social-btn.linkedin:hover {
+    background: linear-gradient(135deg, #0077b5, #005885);
+    box-shadow: 0 15px 30px rgba(0, 119, 181, 0.4);
+}
+
+.social-btn.instagram:hover {
+    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    box-shadow: 0 15px 30px rgba(240, 148, 51, 0.4);
+}
+
+.social-btn.x:hover {
+    background: linear-gradient(135deg, #000, #333);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
 }
 
 /* --- Responsive Design --- */
