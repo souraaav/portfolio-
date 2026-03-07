@@ -20,7 +20,7 @@ The site is built with a focus on **clean design, robust responsiveness, and hig
 * **100% Responsive Design:** Optimized for seamless viewing on desktop, tablet, and mobile devices.
 * **Theme Toggle:** Integrated feature allowing users to switch effortlessly between **Light and Dark modes**.
 * **Dynamic Showcase:** Dedicated sections for project deep-dives, highlighting challenges, solutions, and technical stacks.
-* **Direct Contact:** A simple, functional contact form to facilitate professional inquiries.
+* **Direct Contact:** A functional contact form using Firebase Firestore to store messages in a database.
 
 ---
 
@@ -33,6 +33,7 @@ This portfolio is a lean and performant application built primarily with foundat
 | **Markup** | HTML5 | Provides the structural foundation of the website. |
 | **Styling** | CSS3 | Custom-written styles for a clean, modern, and adaptive aesthetic. |
 | **Interactivity**| JavaScript (ES6+) | Handles DOM manipulation, theme toggling, and form submission logic. |
+| **Database** | Firebase Firestore | NoSQL database for storing contact form submissions. |
 
 
 ##  Live Demo
@@ -68,6 +69,22 @@ You only need a modern web browser (like Chrome, Firefox, or Edge).
     open index.html 
     # or manually navigate to the file path
     ```
+
+---
+
+##  Contact Form Setup
+
+The contact form uses Firebase Firestore to store form submissions in a NoSQL database.
+
+### Setup Steps
+
+1. Create a Firebase project at [Firebase Console](https://console.firebase.google.com/).
+2. Enable Firestore Database in your project.
+3. Go to Project Settings > General > Your apps, and add a web app if not already.
+4. Copy the Firebase config object.
+5. In `index.html`, replace the `firebaseConfig` object with your actual config values.
+6. Set Firestore rules to allow writes (for testing, allow all; for production, secure it).
+7. Deploy the site, and form submissions will be stored in your Firestore 'contacts' collection.
 
 ---
 
