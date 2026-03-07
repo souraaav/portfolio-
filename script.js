@@ -13,28 +13,22 @@
 
     yearEl.textContent = new Date().getFullYear();
 
- 
     function updateToggleIcon() {
         const isDark = !body.classList.contains("light");
         btn.innerHTML = isDark ? sunIcon : moonIcon;
     }
-   
-    
+
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "light") {
         body.classList.add("light");
     } else {
-       
         body.classList.remove("light");
     }
     updateToggleIcon();
 
-   
     btn.addEventListener("click", () => {
-       
         btn.classList.add('animate-toggle');
-        
-       
+
         setTimeout(() => {
             body.classList.toggle("light");
             const isLight = body.classList.contains("light");
@@ -43,22 +37,20 @@
             btn.classList.remove('animate-toggle');
         }, 50);
     });
- 
+
     function runHeroAnimation() {
-        
         heroH1.style.opacity = 0;
         heroP.style.opacity = 0;
         heroCta.style.opacity = 0;
         socialLinks.style.opacity = 0;
 
-       
         const transitionStyle = 'opacity 1s ease-out, transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
 
         setTimeout(() => {
             heroH1.style.transition = transitionStyle;
             heroH1.style.opacity = 1;
             heroH1.style.transform = 'translateY(0)';
-            
+
             setTimeout(() => {
                 heroP.style.transition = transitionStyle;
                 heroP.style.opacity = 1;
@@ -68,7 +60,7 @@
                     heroCta.style.transition = transitionStyle;
                     heroCta.style.opacity = 1;
                     heroCta.style.transform = 'translateY(0)';
-                    
+
                     setTimeout(() => {
                         socialLinks.style.transition = transitionStyle;
                         socialLinks.style.opacity = 1;
@@ -78,19 +70,14 @@
                 }, 200);
 
             }, 200);
-            
         }, 100);
     }
-   
+
     runHeroAnimation();
 
-
-   
     const revealElements = document.querySelectorAll(".card-item, .about-text");
 
-   
     revealElements.forEach((el, index) => {
-       
         el.style.transitionDelay = `${index * 90}ms`;
     });
 
@@ -108,7 +95,6 @@
 
     revealElements.forEach(el => observer.observe(el));
 
-    
     contactForm.addEventListener('submit', async function(event) {
         event.preventDefault(); 
         const name = document.getElementById('name').value;
@@ -116,7 +102,15 @@
         const message = document.getElementById('message').value;
 
         try {
-            
+            // Send email via EmailJS
+            await emailjs.send('service_55eiod2', 'template_hbg5gmp', {
+                from_name: name,
+                from_email: email,
+                message: message,
+                to_email: 'sujitc079@gmail.com'  // Replace with your Gmail address
+            });
+
+            // Optionally, still save to Firestore
             const docRef = await window.addDoc(window.collection(window.db, "contacts"), {
                 name: name,
                 email: email,
@@ -125,13 +119,12 @@
             });
             console.log("Document written with ID: ", docRef.id);
 
-           
             formMessage.textContent = `Thank you, ${name}! Your message has been sent successfully.`;
             formMessage.style.color = 'var(--accent-color)';
             formMessage.style.opacity = 1;
             contactForm.reset();
         } catch (error) {
-            console.error("Error adding document: ", error);
+            console.error("Error: ", error);
             formMessage.textContent = 'Oops! There was a problem sending your message. Please try again.';
             formMessage.style.color = '#ff6b6b';
             formMessage.style.opacity = 1;
@@ -144,5 +137,4 @@
             }, 5000);
         }
     });
-
 })();
