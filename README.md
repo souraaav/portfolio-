@@ -112,8 +112,8 @@ Feel free to fork the repository, modify it for your own use, or submit pull req
 Connect with me on social platforms:
 
 * **GitHub:** [https://github.com/souraaav](https://github.com/souraaav)
-* **LinkedIn:** []
-* **[Other Social Link (e.g., Twitter/X)]:** [Your Other Social URL]
+* **LinkedIn:** [https://www.linkedin.com/in/sourav-chowdhury-60b104373/]
+* **[Other Social Link (e.g., Twitter/X)]:** [https://x.com/cl4n_tex_9]
 
 Project Link: [https://github.com/souraaav/portfolio-](https://github.com/souraaav/portfolio-)
 
