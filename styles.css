@@ -140,6 +140,20 @@ section {
     padding-top: 100px;
 }
 
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid var(--accent-color);
+    box-shadow: 0 8px 15px var(--shadow-color);
+    /* Initial state for JS animation */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
 /* --- TYPOGRAPHY & ELEMENTS --- */
 .logo {
     font-size: 1.75rem; /* Slightly larger logo */
